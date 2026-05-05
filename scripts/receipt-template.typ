@@ -23,6 +23,11 @@
   v(.1em)
 }}
 
+#let indent(content) = {
+  h(2em)
+  content
+}
+
 #let receipt-layout(doc) = {
   set page(paper: "a7", height: auto, margin: (x: 4pt, y: 8pt))
   set text(font: "Sarasa Mono SC", size: 8pt)
