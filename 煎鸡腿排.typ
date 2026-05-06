@@ -1,6 +1,6 @@
 = 煎鸡腿排
 // recipe
-#link("https://www.bilibili.com/video/BV1FT4y197Ap")[]
+#link("https://www.bilibili.com/video/BV1FT4y197Ap")[詹姆士/姆士流]
 #divider()
 + 鸡腿去骨
 + 刀背打散纤维，划几刀
@@ -8,6 +8,6 @@
 + 小火，火力覆盖到锅里的煎鸡排面积
 + 皮朝下煎≈1.5@min，压一压鸡排凸起的部分
 + 皮朝上煎≈1@min。皮上撒盐、胡椒
-+ 皮朝下煎熟，≈0.5~1min。肉上撒盐
++ 皮朝下煎熟，≈0.5-1min。肉上撒盐
 + 皮朝上煎熟
 + 切好
