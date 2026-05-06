@@ -49,6 +49,22 @@ in:
   long: inch
   metric-units: 2.54cm
   zh-cn: 英寸
+cm:
+  short: cm
+  long: centimeter
+  zh-cn: 厘米
+mm:
+  short: mm
+  long: millimeter
+  zh-cn: 毫米
+cm2:
+  short: cm²
+  long: square centimeter
+  zh-cn: 平方厘米
+mm2:
+  short: mm²
+  long: square millimeter
+  zh-cn: 平方毫米
 l:
   short: L
   long: litre
@@ -74,6 +90,10 @@ qs:
   short: q.s.
   long: quantum satis
   zh-cn: 适量
+degc:
+  short: ℃
+  long: degree Celsius
+  zh-cn: 度
 whole:
   short: whole
   zh-cn: 整个
