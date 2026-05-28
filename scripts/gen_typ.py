@@ -1,7 +1,7 @@
 import sys, argparse
 from pathlib import Path
 
-def generate_typ(filename, fonts):
+def generate_typ(filename, size_str):
     typs_dir = Path("typs")
     typs_dir.mkdir(exist_ok=True)
     typ_path = Path(f"{filename}.typ")
@@ -10,10 +10,12 @@ def generate_typ(filename, fonts):
         print(f"Error: Typst file not found for {filename}")
         sys.exit(1)
 
-    font_str = ", ".join(f'"{f}"' for f in fonts)
+    if not any(c.isalpha() for c in size_str):
+    		size_str = size_str + "pt"
+
     original_content = typ_path.read_text(encoding="utf-8")
     content = f"""#import "../scripts/receipt-template.typ": *
-#show: receipt-layout
+#show: receipt-layout.with(size: {size_str})
 
 {original_content}
 """
@@ -25,7 +27,6 @@ def generate_typ(filename, fonts):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Typst file from Typst")
     parser.add_argument("filename", help="Typst filename (without .typ extension)")
-    parser.add_argument("--font", action="append", dest="fonts", help="Font name (can be specified multiple times)")
+    parser.add_argument("--size", default="8pt", help="Font size (default: 8pt)")
     args = parser.parse_args()
-    fonts = args.fonts if args.fonts else ["MonaspiceNe NFM", "Sarasa Mono SC"]
-    generate_typ(args.filename, fonts)
+    generate_typ(args.filename, args.size)
