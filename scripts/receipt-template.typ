@@ -28,9 +28,9 @@
   content
 }
 
-#let receipt-layout(doc, size: 8pt) = {
+#let receipt-layout(doc, size: 8pt, font: ("Sarasa Mono SC",)) = {
   set page(paper: "a7", height: auto, margin: (x: 4pt, y: 8pt))
-  set text(font: "Sarasa Mono SC", size: size)
+  set text(font: font, size: size)
   set par(spacing: .6em, justify: true)
   show terms.item: it => {
     pad(left: 1.5em)[
